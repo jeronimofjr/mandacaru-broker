@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <module name="TreeWalker">
+
+        <!--        Importes (Combater uso indevido do * Video do Gabriel falando)-->
+        <!--        https://checkstyle.org/checks/imports/index.html -->
+        <module name="AvoidStarImport"/>
+        <module name="AvoidStaticImport"/>
+        <module name="IllegalImport"/>
+        <module name="ImportOrder"/>
+        <module name="RedundantImport"/>
+        <module name="UnusedImports"/>
+
+<!--        Complexidade do Codigo -->
+        <module name="CyclomaticComplexity"/>
+        <module name="BooleanExpressionComplexity"/>
+
+<!--        maximo possivel de retornos-->
+        <module name="ReturnCount">
+            <property name="max" value="3"/>
+        </module>
+
+        <!--        Conversoes de Nomeclatura (Cobater más praticas Pedidos no documento)-->
+        <!--        https://checkstyle.org/checks/naming/index.html-->
+        <module name="AbbreviationAsWordInName"/>
+        <module name="CatchParameterName"/>
+        <module name="ClassTypeParameterName"/>
+        <module name="ConstantName"/>
+        <module name="IllegalIdentifierName"/>
+        <module name="LocalFinalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+        </module>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="MethodName"/>
+        <module name="PackageName"/>
+        <module name="ParameterName"/>
+        <module name="PatternVariableName"/>
+        <module name="StaticVariableName"/>
+        <module name="TypeName"/>
+        <!--        Uso de Colchetes-->
+        <module name="NeedBraces"/>
+
+        <!--        IDENTACAO-->
+        <module name="Indentation"/>
+
+
+        <!--        espaços em Branco-->
+
+        <module name="EmptyLineSeparator"/>
+        <module name="NoLineWrap"/>
+        <module name="NoWhitespaceAfter"/>
+        <module name="ParenPad"/>
+        <module name="WhitespaceAround"/>
+
+        <!--        Tamnaho do Arquivo-->
+        <!--        https://checkstyle.org/checks/sizes/index.html-->
+        <module name="MethodCount"/>
+        <module name="ParameterNumber"/>
+
+    </module>
+
+    <!--        Tamnaho do Arquivo-->
+    <!--        https://checkstyle.org/checks/sizes/index.html-->
+    <module name="FileLength"/>
+    <module name="LineLength">
+        <property name="max" value="120"/>
+    </module>
+
+
+
+</module>
